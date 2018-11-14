@@ -1,0 +1,501 @@
+@import "fonts"
+@import "libs"
+
+*, *:before, *:after
+	box-sizing: border-box
+
+ul
+	padding: 0
+	margin: 0
+	li
+		list-style: none
+
+p
+	padding: 0
+	margin: 0
+
+a
+	padding: 0
+	margin: 0
+	text-decoration: none
+
+body
+	font-weight: 400
+	position: relative
+	font-family: "Proxima Nova"
+	margin: 0
+	padding: 0
+
+.page
+	display: grid
+	grid-template-areas: "header" "menu" "content" "footer"
+
+	// < -------- -------- ------ -------- -------- > //
+	// < -------- -------- HEADER -------- -------- > //
+	// < -------- -------- ------ -------- -------- > //
+
+.header
+	grid-area: header
+	height: 875px
+	display: grid
+	padding: 0 30px
+	position: relative
+	grid-template-columns: minmax(auto, 1170px)
+	justify-content: center
+
+	// < -------- -------- HEADER SLIDER -------- -------- > //
+
+	&-slider
+		width: 100%
+		height: 100%
+		img
+			object-fit: cover
+			width: 100%
+			height: 100%
+
+	.bx
+		&-wrapper
+			top: 0
+			width: 100%
+			height: 100%
+			position: absolute
+
+		&-viewport
+			width: 100%
+			height: 100%
+
+		&-controls
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0
+
+			&-direction
+				.bx-prev
+					z-index: 80
+					width: 35px
+					height: 35px
+					position: absolute
+					bottom: 50%
+					top: 53.5%
+					left: 1.5%
+					font-size: 0
+					border-radius: 50px
+					background-color: #cf9893
+					background-image: url(../img/left_arrow_icon.png)
+					background-repeat: no-repeat
+					background-position: center
+
+				.bx-next
+					z-index: 80
+					width: 35px
+					height: 35px
+					position: absolute
+					bottom: 50%
+					top: 53.5%
+					right: 1.5%
+					font-size: 0
+					border-radius: 50px
+					background-color: #cf9893
+					background-image: url(../img/right_arrow_icon.png)
+					background-repeat: no-repeat
+					background-position: center
+
+		&-pager
+			width: 100%
+			position: absolute
+			bottom: 0
+			display: flex
+			justify-content: center
+
+			&-item
+				z-index: 80
+				font-size: 0
+				border-radius: 50px
+				margin-bottom: 20px
+				width: 15px
+				height: 15px
+				margin-right: 15px
+
+			&-link
+				background-color: #ffffff
+				border-radius: 50px
+				display: block
+				width: 100%
+				height: 100%
+
+			.active
+				background-color: #cf9893
+
+	// < -------- -------- HEADER MIN-MANU -------- -------- > //
+
+	&-min-menu
+		display: none
+	
+	.wrapper-header
+		z-index: 60
+		height: 100%
+		width: 100%
+		// background-color: #f232
+
+	// < -------- -------- HEADER SLIDER CONTENT -------- -------- > //
+
+	&-slider-content
+		margin-top: 183px
+		display: grid
+		grid-template-columns: 1fr
+		grid-gap: 21px
+
+		&__big-text
+			margin-left: -1px
+			text-shadow: 0 0 25px rgba(255, 255, 255, 0.75)
+			color: #333333
+			font-family: "MuseoCyrl-500"
+			font-size: 50px
+			span
+				color: #d34d64
+
+		&__small-text
+			width: 718px
+			font-size: 20px
+			font-family: "Proxima Nova"
+			color: #333333
+			text-shadow: 0 0 25px rgba(255, 255, 255, 0.75)
+
+
+	// < -------- -------- HEADER TOP-LINE -------- -------- > //
+
+	&-top-line
+		display: grid
+		grid-template-columns: minmax(auto, 270px) minmax(auto, 1fr) minmax(auto, 62px)
+		grid-template-rows: 55px 55px
+
+		&__menu
+			display: none
+
+		&__logo
+			grid-column: 1 / 2
+			grid-row: 1 / 3
+			a
+				display: block
+				width: 100%
+				height: 100%
+				background-image: url(../img/top-logo.png)
+				background-repeat: no-repeat
+				background-position: center
+
+		&-opacity
+			opacity: 0.3
+
+		&__first-line
+			margin-left: 30px
+			margin-right: 38px
+			grid-column: 2 / 3
+			grid-row: 1 / 2
+			position: relative
+			display: grid
+			grid-template-columns: minmax(auto, 61.1%) minmax(auto, 1fr)
+
+			&--tel-number
+				display: grid
+				grid-template-columns: 1fr 1fr 1fr
+
+				.tel-number	
+					height: 100%
+
+					&-1
+						justify-self: start
+						align-self: center
+					
+					&-2
+						margin-left: -1px
+						justify-self: center
+						align-self: center
+
+					&-3
+						justify-self: end
+						align-self: center
+
+					&-1, &-2 ,&-3
+
+						a
+							font-family: "MuseoCyrl-500"
+							font-size: 16px
+							color: #898889		
+						
+			&--user-menu
+				display: grid
+				grid-template-columns: minmax(auto, 51%) minmax(auto, 49%)
+				.sign-in
+					justify-self: end
+					width: 63px
+					a
+						background-image: url(../img/icon_sign_in.png)
+						background-position: 43px 18px
+						padding-top: 18px
+
+				.registration
+					justify-self: end
+					width: 118px
+					a
+						background-image: url(../img/icon_sign_up.png)
+						background-position: right 16px
+						padding-top: 18px
+
+				.sign-in, .registration
+
+					a
+						background-repeat: no-repeat
+						display: block
+						color: #cf9893
+						font-family: "MuseoCyrl-500"
+						text-decoration: underline
+						font-size: 16px
+			&::before
+				content: ''
+				position: absolute
+				width: 100%
+				bottom: -1px
+				height: 1px
+				background-color: #898889
+				opacity: 0.3
+
+
+
+		&__second-line
+			grid-column: 2 / 3
+			grid-row: 2 / 3
+			display: grid
+			grid-template-columns: minmax(auto, 52.5%) minmax(auto, 1fr) minmax(auto, 16.5%)		
+
+			&--menu
+				display: grid
+				grid-template-columns: minmax(auto, 34.6%) minmax(auto, 1fr) minmax(auto, 1fr)
+
+				&-items
+					justify-self: end
+					align-self: center
+					display: inline-block
+
+					a
+						color: #333333
+						font-family: "MuseoCyrl-500"
+						font-size: 16px
+						position: relative
+
+						&:hover
+							color: #cf9893
+
+							&::before
+								width: 100%
+								content: ''
+								position: absolute
+								bottom: -5px
+								border: 1.5px solid #cf9893
+
+
+			&--search
+
+				&-button
+					display: none !important
+					margin-right: 10px
+					display: block
+					width: 35px
+					height: 35px
+					background-color: #d3c29f
+					border-radius: 50px
+					background-repeat: no-repeat
+					background-image: url(../img/icon_search.png)
+					background-position: center
+					cursor: pointer
+					align-self: center
+					justify-self: end
+
+				display: grid
+				justify-self: end
+				
+				width: 170px
+				grid-template-columns: minmax(auto, 135px) minmax(auto, 35px)
+				input
+					background-color: transparent
+					padding-bottom: 2px
+					padding-left: 9px
+					font-family: "Proxima Nova"
+					font-size: 14px
+					align-self: center
+					height: 29px
+					border: none
+					border-bottom: 1px solid #d2d2d2
+					outline: none
+
+				input::-webkit-input-placeholder
+					color: #898889
+					
+				input::-moz-placeholder
+					color: #898889
+
+				button
+					cursor: pointer
+					background-repeat: no-repeat
+					background-image: url(../img/icon_search.png)
+					background-position: center
+					align-self: center
+					background-color: #d3c29f
+					width: 35px
+					outline: none
+					padding: 0
+					border: none
+					height: 35px
+					border-radius: 50px
+						
+					
+			&--language
+				display: grid
+
+				span
+					cursor: pointer
+					margin-left: 10px
+					padding-top: 5px
+					padding-left: 11px
+					align-self: center
+					height: 30px
+					font-family: "MuseoCyrl-500"
+					font-size: 16px
+					color: #898889
+					width: 60px
+					justify-self: center
+					display: block
+					position: relative
+					background-image: url(../img/icon_arrow10x6.png)
+					background-repeat: no-repeat
+					background-position: 44px 13px
+				
+
+
+		&__cart
+			grid-column: 3 / 4
+			grid-row: 1 / 3
+			display: grid
+
+			&--count
+				cursor: pointer
+				align-self: center
+				width: 53px
+				height: 53px
+				background-color: #d3c29f
+				border-radius: 50px
+				position: relative
+				background-image: url(../img/icon_cart.png)
+				background-repeat: no-repeat
+				background-position: 14px center
+
+				span
+					padding-top: 4px
+					padding-left: 8px
+					font-size: 14px
+					font-family: "MuseoCyrl-500"
+					color: #fff
+					right: -9px
+					bottom: 1px
+					position: absolute
+					width: 24px
+					height: 24px
+					background-color: #cf9893
+					border-radius: 50px
+
+
+	// < -------- -------- HEADER CONTENT -------- -------- > //
+
+
+	&-content
+		width: 100%
+		height: auto
+		background-color: #ffffff
+		opacity: 0.8
+		border-radius: 10px
+
+		&__items
+			display: grid
+			grid-template-columns: repeat(11, 1fr) 
+
+			&--item
+				text-align: center
+				height: 100px
+				position: relative
+				background-repeat: no-repeat
+
+				&::before
+					content: ''
+					position: absolute
+					right: 0
+					width: 1px
+					background-color: #d2d2d2
+					opacity: 0.4
+					height: 80px
+					top: 10px
+
+				&:last-child
+					&::before
+						display: none
+
+				a
+					font-size: 14px
+					color: #333333
+					padding-top: 65px
+					display: block
+					height: 100%
+
+				@for $i from 1 through 11 
+					&:nth-child(#{$i})
+						background-image: url(../img/icons/icon-#{$i}.svg)
+
+				&:nth-child(1)
+					background-position: 39px 20px
+					background-size: 30px
+
+				&:nth-child(2)
+					background-position: 40px 20px
+					background-size: 30px
+
+				&:nth-child(3)
+					background-position: 39px 19px
+					background-size: 31px
+
+				&:nth-child(4)
+					background-position: 42px 21px
+					background-size: 30px
+
+				&:nth-child(5)
+					background-position: 28px -4px
+					background-size: 53px
+
+				&:nth-child(6)
+					background-position: 37px 21px
+					background-size: 29px
+
+				&:nth-child(7), &:nth-child(8)
+					background-position: 39px 21px
+					background-size: 29px
+				
+				&:nth-child(9)
+					background-position: 42px 27px
+					background-size: 23px
+
+				&:nth-child(10)
+					background-position: 28px 0px
+					background-size: 50px	
+
+				&:nth-child(11)
+					background-position: 38px 20px
+					background-size: 30px
+
+.content
+	grid-area: content
+	height: 300px
+	margin: 10px 10px
+
+.footer
+	grid-area: footer
+
+
+@import "media"

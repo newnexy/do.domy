@@ -1,0 +1,1075 @@
+@media only screen and (max-width : 1300px)
+
+	// < -------- -------- ------ -------- -------- > //
+	// < -------- -------- HEADER -------- -------- > //
+	// < -------- -------- ------ -------- -------- > //
+
+	.wrapper-header
+
+		.header-slider-content
+			margin-left: 40px
+			margin-right: 40px	
+
+			&__big-text
+				font-size: 30px
+
+@media only screen and (max-width : 1200px)
+
+	// < -------- -------- ------ -------- -------- > //
+	// < -------- -------- HEADER -------- -------- > //
+	// < -------- -------- ------ -------- -------- > //
+
+	.header
+
+		&-top-line
+
+			&__first-line
+
+				&--tel-number
+					
+					.tel-number
+
+						&-1, &-2 ,&-3
+
+							a
+								font-size: 14px
+
+				&--user-menu
+
+					.sign-in
+						margin-right: 10px
+
+			&__second-line
+
+				&--menu			
+					margin-right: 20px
+
+		&-content
+
+			&__items
+
+				&--item
+					padding-right: 5px 
+					padding-left: 5px
+
+					@for $i from 1 through 11 
+						&:nth-child(#{$i})
+							background-position: center 25px
+
+					&:nth-child(5)
+						background-position: center 0
+
+					&:nth-child(10)
+						background-position: center -5px
+						a
+							padding-top: 55px
+
+
+@media only screen and (max-width : 992px)
+	
+	// < -------- -------- ------ -------- -------- > //
+	// < -------- -------- HEADER -------- -------- > //
+	// < -------- -------- ------ -------- -------- > //
+	
+	.header
+		height: 341px
+		padding: 0
+
+		&::before
+			content: ''
+			width: 100%
+			height: 80px
+			background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #ffffff 100%)
+			position: absolute
+			top: 0
+			z-index: 60
+
+		// < -------- -------- HEADER TOP LINE -------- -------- > //
+
+		&-top-line
+			margin-top: 13px
+			margin-bottom: 12px
+			grid-template-columns: minmax(auto, 78px) 157px minmax(auto, 291px) minmax(auto, 1fr) minmax(auto, 77px)
+			grid-template-rows: 55px
+
+			&__menu
+				display: block
+				margin-right: 10px
+				grid-column: 1 / 2
+				width: 63px
+				height: 100%
+				background-color: #cf9893
+
+				&--btn
+					display: block
+					width: 100%
+					height: 100%
+					position: relative
+					background-color: #cf9893
+
+					span,
+					span::before,
+					span::after
+						position: absolute
+						top: 50% 
+						margin-top: -1px
+						left: 50% 
+						margin-left: -15px
+						width: 30px
+						height: 2px
+						background-color: #fff
+						content: ''
+						display: block
+
+					span::before
+						margin-top: -6px
+						transform: translateY(-5px)
+
+					span::after
+						margin-top: 4px
+						transform: translateY(5px)
+
+
+			&__logo
+				grid-column: 2 / 3
+				a
+					background-image: url(../img/logo_750.png)
+					background-position: center 11px
+		
+
+			&__first-line
+				justify-self: end
+				margin: 0
+				margin-left: 10px
+				grid-column: 3 / 4
+				width: 261px
+				grid-template-columns: minmax(auto, 48%) minmax(auto, 52%)
+				grid-template-rows: 27.5px
+
+				&::before
+					display: none
+
+				&--tel-number
+					width: 100%			
+					grid-row: 1 / 3
+					grid-column: 1 / 3
+
+					grid-template-columns: minmax(auto, 48%) minmax(auto, 52%)
+					grid-template-rows: 27.5px 27.5px
+
+					.tel-number
+						height: auto
+						display: inline-block
+						
+						&-1
+							grid-column: 1 / 3
+							grid-row: 1 / 2
+
+						&-2
+							padding: 0
+							grid-column: 2 / 3
+							grid-row: 2 / 3
+							justify-self: start
+							padding-bottom: 5px
+							padding-left: 1px
+
+						&-3
+							padding: 0
+							padding-bottom: 5px
+							grid-column: 1 / 2
+							grid-row: 2 / 3
+							justify-self: start
+
+
+				
+				&--user-menu
+					padding-top: 6px
+					width: auto
+					grid-row: 1 / 2
+					grid-column: 2 / 3
+					grid-template-columns: minmax(auto, 30%) minmax(auto, 70%)
+
+					.sign-in
+						justify-self: start
+						margin-right: 0
+						width: auto
+						a
+							font-size: 14px
+							padding: 0
+							background-image: none
+					
+					.registration
+						width: auto
+						a
+							font-size: 14px
+							padding: 0
+							background-position: right
+							background-image: none
+
+
+
+			&__second-line
+				margin-left: 10px
+				grid-template-columns: minmax(auto, 70%) minmax(auto, 30%)
+				grid-column: 4 / 5
+				grid-row: 1 / 2
+
+				&--menu
+					display: none
+
+				&--search
+					justify-self: center
+
+				&--language
+					justify-self: center
+					span
+						width: 43px
+						padding: 0
+						margin: 0
+						padding-top: 5px
+						font-size: 14px
+						background-position: 21px 12px
+						background-image: url(../img/icon_arrow9x5.png)
+
+		
+
+
+			&__cart	
+				grid-column: 5 / 6
+
+
+		// < -------- -------- HEADER MIN-MENU -------- -------- > //
+
+		&-min-menu
+			position: absolute
+			display: block
+			transition: 0.5s
+			transform: translateX(-100%)
+			position: absolute
+			top: 0
+			left: 0
+			width: 250px
+			height: 228px
+			z-index: 80
+			background-color: #874463
+			opacity: 0.95
+
+			&__basket, &__user-menu, &__search
+				display: none
+
+			&__close
+				margin-right: 5px
+				float: right
+				display: block
+				width: 35px
+				height: 34px
+				background-image: url(../img/icon_close.png)
+				background-repeat: no-repeat
+				background-position: center
+
+			&__items
+				margin-top: 44px
+				width: 100%
+				height: auto
+
+			&__item
+				line-height: 2.3em
+				font-size: 20px
+				font-weight: 400
+				font-family: "MuseoCyrl-500"
+				text-align: center
+				width: 100%
+				height: 50px
+				a
+					color: #fff
+
+				&:hover, :active
+					background-color: #fff
+
+					a
+						color: #898889
+
+			&-active
+				transform: translateX(0%)
+
+
+		// < -------- -------- HEADER CONTENT -------- -------- > //
+			
+		&-content
+			width: 100%
+			height: auto
+			background-color: #ffffff
+			opacity: 0.8
+			border-radius: 0
+
+			&__items
+				display: grid
+				grid-template-columns: repeat(11, 1fr)
+
+				&--item
+					text-align: center
+					height: 60px
+					position: relative
+					background-repeat: no-repeat
+
+					&::before
+						content: ''
+						position: absolute
+						right: 0
+						width: 1px
+						background-color: #d2d2d2
+						opacity: 0.4
+						height: 40px
+						top: 10px
+
+					a
+						font-size: 14px
+						color: #333333
+						padding-top: 36px
+						display: block
+						height: 100%
+
+					@for $i from 1 through 11 
+						&:nth-child(#{$i})
+							background-image: url(../img/icons/icon-#{$i}.svg)
+
+					&:nth-child(1)
+						text-align: center
+						padding-right: 6px
+						background-position: center 10px
+						background-size: 22px
+
+					&:nth-child(2)
+						background-position: center 10px
+						background-size: 22px
+
+					&:nth-child(3)
+						background-position: center 8px
+						background-size: 24px
+
+					&:nth-child(4)
+						padding-left: 4px
+						background-position: center 11px
+						background-size: 21px
+
+					&:nth-child(5)
+						background-position: center -8px
+						background-size: 40px
+
+					&:nth-child(6)
+						padding-right: 6px
+						background-position: center 10px
+						background-size: 22px
+
+					&:nth-child(7)
+						background-position: center 10px
+						background-size: 22px
+
+					&:nth-child(8)
+						background-position: center 10px
+						background-size: 22px
+
+					&:nth-child(9)
+						background-position: center 15px
+						background-size: 18px
+
+					&:nth-child(10)
+						a
+							font-size: 12px
+							padding-top: 39px
+							line-height: 12px
+							padding-left: 8px
+							padding-right: 8px
+
+						background-position: center -13px
+						background-size: 41px	
+
+					&:nth-child(11)
+						background-position: center 10px
+						background-size: 22px
+				
+		// < -------- -------- HEADER SLIDER -------- -------- > //
+
+		&-slider
+			height: 341px
+
+		.bx
+			&-controls-direction
+
+				.bx-prev
+					top: 56.5%
+					left: 2%
+
+				.bx-next
+					top: 56.5%
+					right: 2%
+
+			&-pager
+				height: 25px
+
+				&-item
+					margin-top: 5px
+					margin-bottom: 0
+					width: 10px
+					height: 10px
+
+		&-content
+
+			&__items
+
+				&--item
+
+					&:nth-child(10)
+						background-position: center -6px
+						background-size: 30px
+						a
+							padding-top: 30px
+
+		&-slider-content
+			display: block
+			margin-top: 22px
+
+			&__big-text
+				margin-left: 37px
+				margin-right: 37px
+
+			&__small-text
+				margin-left: 38px
+				margin-right: 38px
+				margin-top: 5px
+				font-size: 14px
+				width: 80%
+
+
+@media only screen and (max-width : 850px)
+	
+	// < -------- -------- ------ -------- -------- > //
+	// < -------- -------- HEADER -------- -------- > //
+	// < -------- -------- ------ -------- -------- > //
+
+	.header
+
+		// < -------- -------- HEADER TOP LINE -------- -------- > //
+
+		&-top-line
+
+			&__second-line
+				margin-left: 10px
+				grid-template-columns: minmax(auto, 94px) minmax(auto, 53px)
+
+				&--language
+						justify-self: end
+
+				&--search
+					transition: 0.3s
+					z-index: 50
+					transform: translateX(-500%)
+					position: absolute
+					display: grid
+					grid-template-columns: 235px 35px
+					justify-content: center
+					padding: 0
+					margin: 0
+					margin-top: 22.5px
+
+					&-active
+						transform: translateX(0%)
+
+					input::-webkit-input-placeholder
+						color: #fff
+						
+					input::-moz-placeholder
+						color: #fff
+						
+					input
+						border-radius: 50px 0 0 50px
+						background-color: #cf9893
+						padding-top: 3px
+						padding-left: 15px
+						padding-bottom: 3px
+						outline: none
+						border: none
+						font-size: 13.5px
+						font-weight: 400
+						height: 35px
+
+						&:focus
+							color: #fff
+
+					button
+						background-color: #cf9893
+						outline: none
+						border: none
+						background-image: url(../../img/icon_search.png)
+						background-repeat: no-repeat
+						background-position: center 
+						margin-left: -2px
+						border-radius: 0 50px 50px 0
+						height: 35px
+	
+					&-button
+						display: block !important
+
+						&-active
+							background-size: 12px
+							background-image: url(../../img/icon_close.png)
+
+
+@media only screen and (max-width : 750px)
+
+	// < -------- -------- ------ -------- -------- > //
+	// < -------- -------- HEADER -------- -------- > //
+	// < -------- -------- ------ -------- -------- > //
+	
+	.header
+
+		// < -------- -------- HEADER CONTENT -------- -------- > //
+			
+		&-content
+
+			&__items
+				grid-template-columns: minmax(82px, 1fr) minmax(65px, 1fr) minmax(65px, 1fr) minmax(65px, 1fr) minmax(65px, 1fr) minmax(66px, 1fr) minmax(65px, 1fr) minmax(65px, 1fr) minmax(65px, 1fr) minmax(65px, 1fr) minmax(65px, 1fr) minmax(auto, 1fr)
+
+				&--item
+
+					&:nth-child(1)
+						background-position: 37px 10px
+
+					&:nth-child(2)
+						background-position: 22px 10px
+
+					&:nth-child(3)
+						background-position: 20px 8px
+
+					&:nth-child(4)
+						padding-left: 4px
+						background-position: 25px 11px
+
+					&:nth-child(5)
+						background-position: 12px -8px
+
+					&:nth-child(6)
+						padding-right: 6px
+						background-position: 21px 10px
+
+					&:nth-child(7)
+						background-position: 21px 10px
+
+					&:nth-child(8)
+						background-position: 22px 10px
+
+					&:nth-child(9)
+						background-position: 25px 15px
+
+					&:nth-child(10)
+						a
+							padding-top: 33px
+
+						background-position: 11px -13px
+						background-size: 41px	
+
+					&:nth-child(11)
+						background-position: 22px 10px
+
+
+
+@media only screen and (max-width : 735px)
+
+	// < -------- -------- ------ -------- -------- > //
+	// < -------- -------- HEADER -------- -------- > //
+	// < -------- -------- ------ -------- -------- > //
+	
+	.header
+
+		// < -------- -------- HEADER TOP-LINE -------- -------- > //
+
+		&-top-line
+			
+			&__first-line
+				margin-left: 15px
+				margin-top: 0
+				margin-bottom: 0
+				grid-template-columns: minmax(auto, 210px)
+				grid-template-rows: 55px
+				width: auto
+	
+				&--tel-number
+					grid-column: 1 / 3
+					justify-self: end
+					width: 100%
+					grid-template-columns: minmax(110px, 48%) minmax(110px, 52%)
+					
+					.tel-number-2
+						
+
+				&--user-menu
+					display: none
+
+
+		// < -------- -------- HEADER CONTENT -------- -------- > //
+
+		&-content
+
+			&__items
+				grid-template-columns: repeat(11, 1fr)
+
+				&--item
+
+					&:nth-child(1)
+						background-position: center 10px
+
+					&:nth-child(2)
+						background-position: center 10px
+
+					&:nth-child(3)
+						background-position: center 8px
+
+					&:nth-child(4)
+						padding-left: 4px
+						background-position: center 11px
+
+					&:nth-child(5)
+						background-position: center -8px
+
+					&:nth-child(6)
+						padding-right: 6px
+						background-position: center 10px
+
+					&:nth-child(7)
+						background-position: center 10px
+
+					&:nth-child(8)
+						background-position: center 10px
+
+					&:nth-child(9)
+						background-position: center 15px
+
+					&:nth-child(10)
+						a
+							padding-top: 33px
+
+						background-position: center -13px
+						background-size: 41px	
+
+					&:nth-child(11)
+						background-position: center 10px		
+
+
+@media only screen and (max-width : 620px)
+
+	// < -------- -------- ------ -------- -------- > //
+	// < -------- -------- HEADER -------- -------- > //
+	// < -------- -------- ------ -------- -------- > //
+	
+	.header
+		height: 450px
+
+		// < -------- -------- HEADER SLIDER -------- -------- > //
+
+		&-slider
+			height: 450px
+
+		// < -------- -------- HEADER SLIDER CONTENT -------- -------- > //
+
+		&-slider-content
+			display: none
+
+		// < -------- -------- HEADER SLIDER CONTROLS -------- -------- > //
+
+		.bx-controls
+			display: none
+
+		// < -------- -------- HEADER TOP-LINE -------- -------- > //
+
+		&-top-line
+			grid-template-columns: 78px 157px 1fr 1fr
+
+			&__menu
+			
+			&__logo
+
+			&__first-line
+				margin-left: 0
+
+				&--tel-number
+					grid-column: 1 / 2
+					grid-template-columns: 1fr
+					grid-template-rows: none
+					justify-self: center
+					
+					.tel-number
+						grid-template-rows: none
+
+						&-1, &-2, &-3
+							justify-self: center
+							grid-column: 1 / 2
+							grid-row: 1 / 2
+							padding: 0
+							margin: 0
+
+						&-1
+							grid-row: 1 / 2
+						&-2
+							grid-row: 2 / 3
+						&-3
+							grid-row: 3 / 4
+
+			&__second-line
+				grid-column: 4 / 6
+
+				&--search
+
+				&--language
+
+			&__cart
+				display: none
+
+		// < -------- -------- HEADER CONTENT -------- -------- > //
+
+		&-content
+			margin-top: 45px
+			display: grid
+			background-color: transparent
+			opacity: 1
+
+			&__items
+				justify-self: center
+				align-self: center
+				grid-template-columns: repeat(4, 90px)
+				grid-gap: 10px
+
+				&--item
+					background-color: #ffffff
+					opacity: 0.9
+					height: 90px
+
+					&::before
+						display: none
+
+					a
+						font-size: 14px
+						color: #333333
+						padding-top: 60px
+						display: block
+						height: 100%
+
+					&:nth-child(1)
+						background-position: 30px 14px
+						background-size: 30px 
+						a
+							padding: 60px 0 0 0
+
+					&:nth-child(2)
+						background-position: 31px 15px
+						background-size: 30px
+						a
+							padding: 60px 0 0 0
+
+					&:nth-child(3)
+						background-position: 30px 12px
+						background-size: 32px
+						a
+							padding: 60px 1px 0 0
+
+					&:nth-child(4)
+						background-position: 34px 14px
+						background-size: 29px
+						a
+							padding: 59px 0 0 0
+
+					&:nth-child(5)
+						background-position: 18px -10px
+						background-size: 53px
+						a
+							padding: 59px 0 0 0
+
+					&:nth-child(6)
+						background-position: 30px 14px
+						background-size: 30px
+						a
+							padding: 59px 0 0 0
+
+					&:nth-child(7)
+						background-position: 30px 12px
+						background-size: 30px
+						a
+							padding: 56px 0 0 0
+
+					&:nth-child(8)
+						background-position: 31px 11px
+						background-size: 30px
+						a
+							padding: 57px 0 0 0
+
+					&:nth-child(n+9)
+						width: 120px
+				
+					&:nth-child(9)
+						background-position: center 18px
+						background-size: 23px
+						grid-column: 1 / 2
+
+					&:nth-child(10)
+						background-position: center -6px
+						background-size: 49px
+						justify-self: center
+						grid-column: 2 / 4
+						a
+							font-size: 14px
+							padding: 61px 0 0 0		
+
+					&:nth-child(11)
+						justify-self: end
+						grid-column: 4 / 5
+						background-position: center 14px
+						background-size: 30px 
+						a
+							padding: 59px 0 0 0
+
+
+
+@media only screen and (max-width : 480px)
+
+	// < -------- -------- ------ -------- -------- > //
+	// < -------- -------- HEADER -------- -------- > //
+	// < -------- -------- ------ -------- -------- > //
+	
+	.header
+		height: 465px
+
+		// < -------- -------- HEADER MIN-MENU -------- -------- > //
+
+		&-min-menu
+			width: 100%
+			height: 100%
+
+			&__close
+				margin-top: 1px
+
+			&__basket
+				margin-top: 45px
+				width: 100%
+				height: 53px
+				display: grid
+				justify-content: center
+
+				&--i-count
+					margin-left: -10px
+					width: 53px
+					height: 53px
+					background-color: #d3c29f
+					position: relative
+					background-image: url(../img/icon_cart.png)
+					background-repeat: no-repeat
+					background-position: 14px center
+					background-size: 24px 21px
+					border-radius: 50px
+
+					span
+						font-weight: 400
+						font-size: 15px
+						color: #fff
+						padding-top: 2px
+						text-align: center
+						display: block
+						width: 24px
+						height: 24px
+						border-radius: 50px
+						bottom: 1px
+						right: -9px
+						position: absolute
+						background-color: #cf9893
+
+			&__user-menu
+				display: block
+				width: 100%
+				height: 100px
+				margin-top: 20px
+				text-align: center
+
+				a
+					line-height: 2.5em
+					color: #cf9893
+					font-family: "MuseoCyrl-500"
+					font-size: 20px
+					font-weight: 400
+					text-decoration: underline
+
+				&--sign-in
+					padding-top: 1px
+					display: block
+					height: 50px
+
+				&--registration
+					display: block
+					height: 50px
+
+			&__items
+				margin-top: 2px
+
+			&__search
+				display: block
+				width: 100%
+				height: auto
+		
+				
+				&--form
+					display: grid
+					grid-template-columns: 135px 35px
+					justify-content: center
+					padding: 0
+					margin: 0
+
+					input::-webkit-input-placeholder
+						color: #fff
+						
+					input::-moz-placeholder
+						color: #fff
+						
+
+					input
+						border-radius: 0
+						padding-top: 3px
+						padding-left: 8px
+						margin-top: -1px
+						outline: none
+						border: none
+						border-bottom: 2px solid #fff
+						background-color: transparent
+						font-size: 13.5px
+						font-weight: 400
+						height: 35px
+
+						&:focus
+							color: #fff
+							
+
+					button
+						outline: none
+						border: none
+						background-image: url(../img/icon_search.png)
+						background-repeat: no-repeat
+						background-position: center 
+						margin-top: 1px
+						border-radius: 50px
+						height: 35px
+						background-color: #d3c29f
+
+
+		// < -------- -------- HEADER SLIDER -------- -------- > //
+
+		&-slider
+			height: 465px
+
+		// < -------- -------- HEADER TOP-LINE -------- -------- > //
+
+		&-top-line
+			margin: 0px
+			grid-template-columns: 69px 91px 1fr 45px
+
+			&__menu
+				width: 53px 
+
+				&--btn
+		
+			&__logo
+				a
+					background-image: url(../img/min_logo.png)
+					background-position: center
+
+			&__first-line
+				margin-left: 0
+
+				&--tel-number
+					height: auto
+					width: 100%
+	
+				
+					.tel-number
+						height: auto
+
+						&-1, &-2, &-3
+							height: auto
+				
+							a
+								display: block
+								font-size: 12px
+								line-height: 1.2em
+								height: auto
+
+						&-1
+							padding-top: 4px
+						&-2
+							padding-left: 1px
+						&-3
+							padding-bottom: 6px
+
+			&__second-line
+				grid-template-columns: 1fr
+				margin-left: 0
+
+				&--search
+
+					&-button
+						display: none !important
+
+				&--language
+					margin-left: -2px
+					justify-self: center
+					width: auto
+					span
+						padding-top: 4px
+						background-position: 21px 11px
+
+
+		// < -------- -------- HEADER CONTENT -------- -------- > //
+
+		&-content
+			margin-top: 10px
+
+			&__items
+				grid-template-columns: repeat(3, 90px)
+				
+				&--item
+
+					&:nth-child(n+9)
+						width: 90px
+						justify-self: start
+
+					&:nth-child(1)
+						background-position: 30px 14px
+						background-size: 30px 
+						a
+							padding: 60px 0 0 0
+
+					&:nth-child(9)
+						background-position: 35px 18px
+						background-size: 23px
+						grid-column: auto
+						a
+							padding: 57px 0 0 0
+
+					&:nth-child(10)
+						background-position: 45px -6px
+						background-size: 49px
+						grid-column: auto
+						width: 140px
+						a
+							font-size: 14px
+							padding: 61px 0 0 0						
+
+					&:nth-child(11)
+						background-position: 55px 14px
+						background-size: 30px 
+						grid-column: auto
+						width: 140px
+						margin-left: 50px
+						a
+							padding: 59px 0 0 0
+
+
+
+
+
+
+
